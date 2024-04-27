@@ -4,26 +4,45 @@ class Program
 {
     static void Main(string[] args)
     {
-        List<int> numbers;
-        numbers = new List<int>();
-        int input;
-        int sum = 0;
-        Console.WriteLine("Enter a list of numbers, type 0 when finished.");
-        do
-        {
-            Console.WriteLine("What is the number?");
-            input = int.Parse(Console.ReadLine());
-            if (input != 0)
-            {
-                numbers.Add(input);
-            }
-        } while (input != 0);
-        foreach (int number in numbers)
-        {
-            sum += number;
-        }
-        Console.WriteLine($"The sum is: {sum}");
-        Console.WriteLine($"The average is: {((float)sum) / numbers.Count}");
-        Console.WriteLine($"The largest number is: {numbers.Max()}");
+        DisplayWelcomeMessage();
+
+        string userName = PromptUserName();
+        int userNumber = PromptUserNumber();
+
+        int squaredNumber = SquareNumber(userNumber);
+
+        DisplayResult(userName, squaredNumber);
+    }
+
+    static void DisplayWelcomeMessage()
+    {
+        Console.WriteLine("Welcome to the program!");
+    }
+
+    static string PromptUserName()
+    {
+        Console.Write("Please enter your name: ");
+        string name = Console.ReadLine();
+
+        return name;
+    }
+
+    static int PromptUserNumber()
+    {
+        Console.Write("Please enter your favorite number: ");
+        int number = int.Parse(Console.ReadLine());
+
+        return number;
+    }
+
+    static int SquareNumber(int number)
+    {
+        int square = number * number;
+        return square;
+    }
+
+    static void DisplayResult(string name, int square)
+    {
+        Console.WriteLine($"{name}, the square of your number is {square}");
     }
 }
