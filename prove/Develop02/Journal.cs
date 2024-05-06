@@ -1,3 +1,5 @@
+using System.Text.RegularExpressions;
+
 class Journal
 {
     public List<Entry> _entries = new List<Entry>();
@@ -25,7 +27,7 @@ class Journal
 
             foreach (Entry entry in _entries)
             {
-                outputFile.WriteLine($"{entry._date}~~{entry._promptText}~~{entry._entryText}");
+                outputFile.WriteLine($"{entry._date},{entry._promptText},{"\"" + entry._entryText + "\""}");
             }
         }
     }
@@ -38,11 +40,12 @@ class Journal
 
         foreach (string line in lines)
         {
-            string[] parts = line.Split("~~");
+            Regex CSVParser = new Regex(",(?=(?:[^\"]*\"[^\"]*\")*(?![^\"]*\"))");
+            string[] parts = CSVParser.Split(line);
 
             string date = parts[0];
             string prompt = parts[1];
-            string text = parts[2];
+            string text = parts[2].Replace("\"", "");
 
             _entries.Add(new Entry { _date = date, _entryText = text, _promptText = prompt });
         }
