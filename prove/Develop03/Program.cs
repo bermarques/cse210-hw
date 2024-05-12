@@ -18,6 +18,7 @@ class Program
         do
         {
             Console.WriteLine(randomScripture.GetDisplayText());
+            Console.WriteLine();
             Console.WriteLine("Press enter to continue or type 'quit' to finish:");
             _userInput = Console.ReadLine();
             if (_userInput == "" && !randomScripture.IsCompletelyHidden())
