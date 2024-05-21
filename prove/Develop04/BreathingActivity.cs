@@ -2,13 +2,13 @@ class BreathingActivity : Activity
 {
     public BreathingActivity() : base()
     {
-        base._name = "Breathing Activity";
-        base._description = "This activity will help you relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing.";
+        _name = "Breathing Activity";
+        _description = "This activity will help you relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing.";
     }
 
     public void Run()
     {
-        int duration = base._duration;
+        int duration = _duration;
 
         Console.Clear();
         while (duration > 0)

@@ -27,7 +27,7 @@ class Activity
         Console.WriteLine("Well done!!");
         ShowSpinner(2);
         Console.WriteLine("");
-        Console.WriteLine($"\bYou have completed {_duration} seconds of the {_name}");
+        Console.WriteLine($"You have completed {_duration} seconds of the {_name}");
         ShowSpinner(5);
     }
 
@@ -39,10 +39,11 @@ class Activity
         int index = 0;
         while (currentTime < targetTime)
         {
-            Console.Write("\r" + spinner[index]);
+            Console.Write(spinner[index]);
             index = (index + 1) % spinner.Length;
             Thread.Sleep(200);
             currentTime = DateTime.Now;
+            Console.Write("\b");
         }
     }
 

@@ -25,12 +25,12 @@ class Program
                     breathing.Run();
                     breathing.DisplayEndingMessage();
                     break;
-                // case "2":
-                //     ReflectionActivity reflextion = new ReflectionActivity();
-                //     reflextion.DisplayStartingMessage();
-                //     reflextion.Run();
-                //     reflextion.DisplayEndingMessage();
-                //     break;
+                case "2":
+                    ReflectingActivity reflextion = new ReflectingActivity();
+                    reflextion.DisplayStartingMessaging();
+                    reflextion.Run();
+                    reflextion.DisplayEndingMessage();
+                    break;
                 // case "3":
                 //     ListingActivity listing = new ListingActivity();
                 //     listing.DisplayStartingMessage();
