@@ -1,0 +1,32 @@
+class BreathingActivity : Activity
+{
+    public BreathingActivity() : base()
+    {
+        base._name = "Breathing Activity";
+        base._description = "This activity will help you relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing.";
+    }
+
+    public void Run()
+    {
+        int duration = base._duration;
+
+        Console.Clear();
+        while (duration > 0)
+        {
+            Console.Write("Breathe in...");
+            ShowCountDown(5);
+            Console.Write("");
+            duration -= 5;
+
+            if (duration <= 0)
+            {
+                break;
+            }
+
+            Console.Write("Breathe out...");
+            ShowCountDown(8);
+            Console.Write("");
+            duration -= 8;
+        }
+    }
+}
