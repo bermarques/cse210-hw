@@ -31,12 +31,12 @@ class Program
                     reflextion.Run();
                     reflextion.DisplayEndingMessage();
                     break;
-                // case "3":
-                //     ListingActivity listing = new ListingActivity();
-                //     listing.DisplayStartingMessage();
-                //     listing.Run();
-                //     listing.DisplayEndingMessage();
-                //     break;
+                case "3":
+                    ListingActivity listing = new ListingActivity();
+                    listing.DisplayStartingMessaging();
+                    listing.Run();
+                    listing.DisplayEndingMessage();
+                    break;
                 // case "4":
                 //     LaughterActivity laughter = new LaughterActivity();
                 //     laughter.DisplayStartingMessage();

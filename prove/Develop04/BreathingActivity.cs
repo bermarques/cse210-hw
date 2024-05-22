@@ -11,7 +11,7 @@ class BreathingActivity : Activity
         int duration = _duration;
 
         Console.Clear();
-        while (duration > 0)
+        do
         {
             Console.Write("Breathe in...");
             ShowCountDown(5);
@@ -27,6 +27,6 @@ class BreathingActivity : Activity
             ShowCountDown(8);
             Console.Write("");
             duration -= 8;
-        }
+        } while (duration > 0);
     }
 }

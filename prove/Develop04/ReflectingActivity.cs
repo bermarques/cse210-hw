@@ -1,7 +1,7 @@
 class ReflectingActivity : Activity
 {
-    List<string> _prompts = new List<string>();
-    List<string> _questions = new List<string>();
+    private List<string> _prompts = new List<string>();
+    private List<string> _questions = new List<string>();
 
     public ReflectingActivity() : base()
     {
@@ -62,7 +62,7 @@ class ReflectingActivity : Activity
 
         int duration = _duration;
         Console.Clear();
-        while (duration > 0)
+        do
         {
             Console.WriteLine($"> {GetRandomQuestion()}");
             ShowSpinner(8);
@@ -70,6 +70,6 @@ class ReflectingActivity : Activity
 
             if (duration <= 0)
                 break;
-        }
+        } while (duration > 0);
     }
 }
