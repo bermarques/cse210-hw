@@ -10,12 +10,12 @@ class Program
         while (true)
         {
             Console.Clear();
-            Console.WriteLine("Please choose an activity:");
-            Console.WriteLine("1. Breathing");
-            Console.WriteLine("2. Reflection");
-            Console.WriteLine("3. Listening");
-            Console.WriteLine("4. Laughter");
-            Console.WriteLine("5. Exit");
+            Console.WriteLine("Menu Options:");
+            Console.WriteLine("  1. Start breathing activity");
+            Console.WriteLine("  2. Start reflecting activity");
+            Console.WriteLine("  3. Start listing activity");
+            Console.WriteLine("  4. Start quote activity");
+            Console.WriteLine("  5. Exit");
             string input = Console.ReadLine();
             switch (input)
             {
@@ -37,12 +37,12 @@ class Program
                     listing.Run();
                     listing.DisplayEndingMessage();
                     break;
-                // case "4":
-                //     LaughterActivity laughter = new LaughterActivity();
-                //     laughter.DisplayStartingMessage();
-                //     laughter.Run();
-                //     laughter.DisplayEndingMessage();
-                //     break;
+                case "4":
+                    QuoteActivity quote = new QuoteActivity();
+                    quote.DisplayStartingMessaging();
+                    quote.Run();
+                    quote.DisplayEndingMessage();
+                    break;
                 case "5":
                     Environment.Exit(0);
                     break;
