@@ -2,7 +2,7 @@ class Activity
 {
     protected string _name { get; set; }
     protected string _description { get; set; }
-    protected int _duration { get; set; }
+    public int _duration { get; set; }
 
     public Activity()
     {
